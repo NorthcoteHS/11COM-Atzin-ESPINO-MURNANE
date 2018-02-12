@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Codi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style type="text/css">
+        .container {
+    position: relative;
+    width: 100%;
+ max-width: 400px;
+}
+
+.container img {
+     position: absolute;
+    top: 50%;
+    left: 43%;
+    width: 100%;
+    height: auto;
+    
+}
+
+.container .btn {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 16px;
+    padding: 400px 300px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px;
+    text-align: center;
+}
+h1 {
+    position: absolute;
+    text-align: right;
+    top: 35%;
+    left: 30%;
+    
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img src="codi.jpg" style="width:100%">
+  <button class="btn" onclick="playAudio()" >    
+    </button>
+    </div>
+
+    <audio id="myAudio">
+  <source src="Bee-Sound.mp3" type="audio/mp3">
+    </audio>
+
+    
+    
+ <h1>Click the bee!</h1>
+    
+    
+        <script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() {
+    x.load();
+    x.play(); 
+} 
+        </script>
+    </body>
+</html>

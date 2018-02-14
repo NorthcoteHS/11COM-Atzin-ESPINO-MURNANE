@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magic 8 Ball</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style type="text/css">
+        .container .btn {
+            position: absolute;
+            background-color: blue;
+            background-image: url(Magic8Ball.jpg);
+            border: none;
+            padding: 112.25px 112.25px;
+            top: 4%;
+            left: 35%;
+            
+            }
+            
+            .container .h1 { 
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            }    
+            
+        </style>
+    </head>
+    <div class="container">
+    
+    <h1 class="h1" id="h1"> Ask me a question, then press me. </h1>    
+    <button type="button" class="btn" onclick="changeh1text()"> </button>
+        
+    </div>     
+    <body>
+
+        <script>
+        
+        function changeh1text() { document.getElementById("h1").innerHTML = rand 
+        }
+            
+        var array_answers = ["The future is hazy.", "It is possible.", "Definitely.", "That will not happen.", "Try again later.", "The future is not certain.", "It is up to you."];  
+        
+        var rand = array_answers[Math.floor(Math.random() * array_answers.length)];
+            
+        </script>
+    </body>
+</html>

@@ -19,26 +19,66 @@
             .container .h1 { 
             text-align: center;
             position: absolute;
-            top: 35%;
-            left: 24%;
+            top: 45%;
+            left: 20%;
             width: 440px;
-            }                
+            }     
+            
+            .container .textbox {
+            position: absolute;
+            top:40%;
+            left:39%;
+            }
+            
+            .container .btn2 {
+            position: absolute;
+            top:44%;
+            left:46.4%;    
+            }
         </style>
     </head>
     <div class="container">
     
-    <h1 class="h1" id="h1"> Ask me a question, then press me. </h1>    
-    <button type="button" class="btn" onclick="changeh1text()" onmousedown="reseth1text()"> </button>
+    <h1 class="h1" id="h1"> Ask me a question. </h1>    
+    <button type="button" class="btn" > </button>
+    
+    <form class="myform" id="myform">    
+    <input type="text" id="textbox" class="textbox" name="question" value="">
+    </form>
+
+    <button type="button" class="btn2" onclick="changeh1text();playAudio();resetentext()";> Submit </button>
         
-    </div>    
+    </div>
+    
+    <audio id="myAudio">
+    <source src="oof.mp3" type="audio/mpeg">
+    </audio> 
+    
     <body>
 
         <script>
         
-        function changeh1text() { document.getElementById("h1").innerHTML = array_answers[Math.floor(Math.random() * array_answers.length)];
+        function resetentext() {        document.getElementById("textbox").value= ""
         }
             
+        function changeh1text() { 
+            var chk = docu.forms["myform"]["form"].value;
+            if (chk == "") {
+                alert("You must input a question")
+                return false;
+                } 
+         document.getElementById("h1").innerHTML = array_answers[Math.floor(Math.random() * array_answers.length)];    
+        }
+
+            
         var array_answers = ["The future is hazy.", "It is possible.", "Definitely.", "That will not happen.", "Try again later.", "The future is not certain.", "It is up to you."];  
+            
+        var x = document.getElementById("myAudio");
+        
+        function playAudio() {
+        x.load();
+        x.play();
+        }
             
         </script>
     </body>

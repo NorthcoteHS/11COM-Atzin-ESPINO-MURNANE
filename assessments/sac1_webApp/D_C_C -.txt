@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Defile Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        
+        
+        <style type="text/css">
+            
+            @font-face {
+                font-family: "HS_font";
+                src: url("HS_font.otf");
+            }
+            body{
+                position: absolute
+                background: url(Defile_full.jpg);
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+            }
+            h1{
+                position: relative;
+                top: 20%;
+                text-align: center;
+                left: -3%;
+                font-family:HS_font;
+                color:lightgoldenrodyellow;
+            }
+            h2{
+                position: absolute;
+                top: 57.6%;
+                text-align: center;
+                left: 34.4%;
+                font-family:HS_font;
+                color:gold;
+            }
+            h3{
+                position: absolute;
+                top: 63.2%;
+                text-align: center;
+                left: 31.9%;
+                font-family:HS_font;
+                color:gold;
+            }
+                input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+            #a1{
+                position: absolute;
+                top: 40%;
+                left: 20%;
+                max-width: 50px;
+                text-align: center;
+                
+            } 
+            #a2{
+                position: absolute;
+                top: 40%;
+                left: 28%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #a3{
+                position: absolute;
+                top: 40%;
+                left: 36%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #a4{
+                position: absolute;
+                top: 40%;
+                left: 44%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #a5{
+                position: absolute;
+                top: 40%;
+                left: 52%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #a6{
+                position: absolute;
+                top: 40%;
+                left: 60%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #a7{
+                position: absolute;
+                top: 40%;
+                left: 68%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #b1{
+                position: absolute;
+                top: 50%;
+                left: 20%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #b2{
+                position: absolute;
+                top: 50%;
+                left: 28%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #b3{
+                position: absolute;
+                top: 50%;
+                left: 36%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #b4{
+                position: absolute;
+                top: 50%;
+                left: 44%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #b5{
+                position: absolute;
+                top: 50%;
+                left: 52%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #b6{
+                position: absolute;
+                top: 50%;
+                left: 60%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #b7{
+                position: absolute;
+                top: 50%;
+                left: 68%;
+                max-width: 50px;
+                text-align: center;
+            } 
+            #e_sub{
+                position: absolute;
+                top: 79%;
+                left: 45%;
+                max-width: 200px;
+                text-align: center
+            }
+            #r_but{
+                position: absolute;
+                top: 79%;
+                left: 40%;
+                max-width: 200px;
+                text-align: center
+            }
+            #s1{
+                position: absolute;
+                top: 60%;
+                left: 44%;
+                max-width: 50px;
+                text-align: center;
+            }
+            #s2{
+                position: absolute;
+                top: 66%;
+                left: 44%;
+                max-width: 50px;
+                text-align: center;
+            }
+            #defile_a{
+                position: absolute;
+                top: 1%;
+                left: 39%;
+                max-width: 250px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body background="Defile_full.jpg">
+  
+  <!-- the code for this video element is courtesy of https://www.hearthpwn.com/cards/62840-defile#gold and their resources. -->
+  <video id="defile_a" class="hscard-video" autoplay="autoplay" loop="loop" width="286" height="395" data-href="/cards/62840-defile#gold" data-usegold="True" data-useanimation="True" data-usevideo="True" data-usegif="True" data-animationurl="https://media-hearth.cursecdn.com/goldCards/62/840/62840.webm" data-gifurl="https://media-hearth.cursecdn.com/avatars/339/336/62840.png" data-goldurl="https://media-hearth.cursecdn.com/avatars/339/336/62840.png" data-imageurl="https://media-hearth.cursecdn.com/avatars/339/334/62840.png" data-width="286" data-height="395">        
+    <source src="https://media-hearth.cursecdn.com/goldCards/62/840/62840.webm" type="video/webm">
+  </video>        
+        
+  <h1> Defile Board Clear Calculator </h1>
+  <h2 style="font-size: 25px">Spell Damage:</h2>
+  <h3 style="font-size: 25px">SD minion Health:</h3>
+        
+  <form>
+  <br>
+    <input type="number" id="a1" min="0" name="a1" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="a2" min="0" name="a2" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br> 
+    <input type="number" id="a3" min="0" name="a3" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="a4" min="0" name="a4" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="a5" min="0" name="a5" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="a6" min="0" name="a6" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="a7" min="0" name="a7" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="b1" min="0" name="b1" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="b2" min="0" name="b2" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br> 
+    <input type="number" id="b3" min="0" name="b3" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="b4" min="0" name="b4" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="b5" min="0" name="b5" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="b6" min="0" name="b6" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="b7" min="0" name="b7" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="s1" min="0" name="s1" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+    <input type="number" id="s2" min="0" name="s2" value="0" style="font-size: 25px" onClick="this.select();">
+  <br>
+  <br>
+  </form> 
+        
+  <button type="button" id="e_sub" onclick="calculator1()" style="font-size: 25px"> Calculate
+  </button>    
+
+  <button type="button" id="r_but" onclick="reset_but()" style="font-size: 25px"> Reset
+  </button>  
+        
+        <script>
+        
+        var m_array = [a1, a2, a3, a4, a5, a6, a7, b1, b2, b3, b4, b5, b6, b7]
+        
+        function calculator1() {
+            var a1=document.getElementById("a1").value||0;
+            var a2=document.getElementById("a2").value||0;
+            var a3=document.getElementById("a3").value||0;
+            var a4=document.getElementById("a4").value||0;
+            var a5=document.getElementById("a5").value||0;
+            var a6=document.getElementById("a6").value||0;
+            var a7=document.getElementById("a7").value||0;
+            var b1=document.getElementById("b1").value||0;
+            var b2=document.getElementById("b2").value||0;
+            var b3=document.getElementById("b3").value||0;
+            var b4=document.getElementById("b4").value||0;
+            var b5=document.getElementById("b5").value||0;
+            var b6=document.getElementById("b6").value||0;
+            var b7=document.getElementById("b7").value||0;
+            var s1=document.getElementById("s1").value||0;
+            var s2=document.getElementById("s2").value||0;
+            }
+        function reset_but() {
+            document.getElementById("a1").value = "0"
+            document.getElementById("a1").value = "0"
+            document.getElementById("a2").value = "0"
+            document.getElementById("a3").value = "0"
+            document.getElementById("a4").value = "0"
+            document.getElementById("a5").value = "0"
+            document.getElementById("a6").value = "0"
+            document.getElementById("a7").value = "0"
+            document.getElementById("b1").value = "0"
+            document.getElementById("b2").value = "0"
+            document.getElementById("b3").value = "0"
+            document.getElementById("b4").value = "0"
+            document.getElementById("b5").value = "0"
+            document.getElementById("b6").value = "0"
+            document.getElementById("b7").value = "0"
+            document.getElementById("s1").value = "0"
+            document.getElementById("s2").value = "0"
+            
+        }
+            
+        </script>
+    </body>
+</html>

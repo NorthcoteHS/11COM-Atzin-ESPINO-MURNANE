@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>YOUR TITLE GOES HERE</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUR TITLE GOES HERE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-        <style type="text/css">
-    
-        </style>
-    </head>
+    <style type="text/css">
+    </style>
+</head>
 
-    <body>
-        <h1>Translation:</h1>
-        <input id="inp_trans">
-        <button>Translate</button>
-        <script>
-            
-        var not_trans = ""    
-            
-        function translate(){
-            
+<h1 id="output">Translation:</h1>
+
+<input id="inp_trans" value="">
+
+<button onclick="change();" id="trans_button" value="">Translate</button>
+
+<body>
+
+    <script>
+        var vowels_filt = ["a", "e", "i", "o", "u"]
+
+        var not_trans = ""
+
+        function change() {
+
             not_trans = document.getElementById("inp_trans").value;
-            
-            var input_lower = not_trans.toLocaleLowerCase()
-            
-            
+
+            pig_latin();
+
         }
-         
-        </script>
-    </body>
+
+        function pig_latin() {
+
+            for (var i = 0; i < vowels_filt.length; i++)
+
+                if(not_trans.startsWith(vowels_filt[i])) {
+
+                    b = not_trans.length
+                    
+                    var trs = not_trans.slice(1, b);
+                    document.getElementById("output").innerHTML = ("Translation: " + trs)
+
+                } else {
+
+                    b = not_trans.length
+                    
+                    var trs = not_trans.slice(1, b);
+                    document.getElementById("output").innerHTML = ("Translation: " + trs)
+
+                }
+        }
+
+        function pig_lat() {
+
+            return not_trans.slice(0, 1);
+
+        }
+    </script>
+</body>
 </html>
